@@ -1,334 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibya Sagar Samal - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">DS</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dibya Sagar Samal - Web Developer & DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+      <div class="loader-content">
+        <div class="loader-logo">
+          <span class="logo-text">DSS</span>
         </div>
+        <div class="loader-spinner">
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+        </div>
+        <p class="loader-text">Loading Portfolio...</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">DSS</span>
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun"></i>
+          </button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Dibya Sagar Samal</span>
-                    </h1>
-                    <p class="hero-subtitle">Web Developer & DevOps Engineer</p>
-                    <p class="hero-description">
-                        Crafting scalable solutions with modern web technologies and robust DevOps practices
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn-secondary">View Projects</a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="mailto:demo@email.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                        <a href="https://linkedin.com/in/demo" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/demo" class="social-icon"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="code-animation">
-                        <div class="code-line"><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
-                        <div class="code-line">  <span class="property">name</span>: <span class="string">'Dibya Sagar'</span>,</div>
-                        <div class="code-line">  <span class="property">skills</span>: [<span class="string">'DevOps'</span>, <span class="string">'Web Dev'</span>],</div>
-                        <div class="code-line">  <span class="property">passion</span>: <span class="string">'Innovation'</span></div>
-                        <div class="code-line">};</div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content reveal fade-up">
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Dibya Sagar Samal</span>
+          </h1>
+          <p class="hero-subtitle">Web Developer & DevOps Engineer</p>
+          <p class="hero-description">
+            Crafting scalable web solutions and robust cloud infrastructures
+            with modern technologies
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <i class="fas fa-file"></i> View Resume
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="about-description">
-                        IT graduate with expertise in Linux systems, DevOps tools, and ELK stack monitoring. 
-                        Currently serving as a DevOps Engineer at VOIS, specializing in incident management 
-                        and cross-functional collaboration.
-                    </p>
-                    <p class="about-description">
-                        Passionate about continuous improvement, automation, and delivering high-performance 
-                        solutions while maintaining strong frontend development capabilities.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-code"></i>
-                            <div>
-                                <h3>50+</h3>
-                                <p>Projects Completed</p>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-server"></i>
-                            <div>
-                                <h3>24/7</h3>
-                                <p>Production Support</p>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <h3>10+</h3>
-                                <p>Team Collaborations</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-visual">
-                    <div class="tech-orbit">
-                        <div class="orbit-center">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="orbit-ring">
-                            <div class="orbit-item"><i class="fab fa-docker"></i></div>
-                            <div class="orbit-item"><i class="fab fa-aws"></i></div>
-                            <div class="orbit-item"><i class="fab fa-jenkins"></i></div>
-                            <div class="orbit-item"><i class="fab fa-react"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            Passionate about creating innovative solutions
+          </p>
         </div>
+        <div class="about-content">
+          <div class="about-text reveal fade-left">
+            <p>
+              As a dedicated Web Developer and DevOps Engineer, I specialize in
+              building scalable web applications and implementing robust cloud
+              infrastructures. With expertise spanning from frontend
+              technologies like React.js to DevOps tools including Docker,
+              Jenkins, and AWS services, I bridge the gap between development
+              and operations to deliver exceptional digital experiences.
+            </p>
+          </div>
+          <div class="stats-grid reveal fade-right">
+            <div class="stat-item">
+              <div class="stat-number">2+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Production Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-items">
-                        <span class="skill-item"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="skill-item"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-item"><i class="fas fa-plus"></i> C++</span>
-                        <span class="skill-item"><i class="fas fa-copyright"></i> C</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-palette"></i> Frontend Technologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-item"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-item"><i class="fab fa-css3"></i> CSS3</span>
-                        <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="skill-item"><i class="fab fa-react"></i> React.js</span>
-                        <span class="skill-item"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-                        <span class="skill-item"><i class="fas fa-wind"></i> Tailwind CSS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
-                    <div class="skill-items">
-                        <span class="skill-item"><i class="fab fa-linux"></i> Linux</span>
-                        <span class="skill-item"><i class="fab fa-git"></i> Git</span>
-                        <span class="skill-item"><i class="fab fa-docker"></i> Docker</span>
-                        <span class="skill-item"><i class="fab fa-jenkins"></i> Jenkins</span>
-                        <span class="skill-item"><i class="fab fa-aws"></i> AWS</span>
-                        <span class="skill-item"><i class="fas fa-terminal"></i> Bash</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Monitoring & Analytics</h3>
-                    <div class="skill-items">
-                        <span class="skill-item"><i class="fas fa-fire"></i> Prometheus</span>
-                        <span class="skill-item"><i class="fas fa-tachometer-alt"></i> Grafana</span>
-                        <span class="skill-item"><i class="fas fa-search"></i> Elasticsearch</span>
-                        <span class="skill-item"><i class="fas fa-eye"></i> Kibana</span>
-                        <span class="skill-item"><i class="fas fa-cube"></i> cAdvisor</span>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Technologies I work with</p>
         </div>
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <div class="category-header">
+              <i class="fas fa-code"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>C++</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-code"></i>
+                <span>C</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="category-header">
+              <i class="fas fa-laptop-code"></i>
+              <h3>Frontend Technologies</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-bootstrap"></i>
+                <span>Bootstrap</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-wind"></i>
+                <span>Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="category-header">
+              <i class="fas fa-cloud"></i>
+              <h3>DevOps & Cloud</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-linux"></i>
+                <span>Linux</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-jenkins"></i>
+                <span>Jenkins</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-layer-group"></i>
+                <span>Terraform</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-terminal"></i>
+                <span>Scripting</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-network-wired"></i>
+                <span>Networking</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <div class="category-header">
+              <i class="fas fa-chart-line"></i>
+              <h3>Monitoring & Logging</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fas fa-fire"></i>
+                <span>Prometheus</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <span>Node Exporter</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-area"></i>
+                <span>Grafana</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-eye"></i>
+                <span>cAdvisor</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-search-plus"></i>
+                <span>Elastic</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-chart-bar"></i>
+                <span>Kibana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle">My professional journey</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-header">
+            <h3>DevOps Engineer</h3>
+            <div class="company">VOIS, India</div>
+            <span class="duration">August 2023 - Present</span>
+          </div>
+          <div class="timeline-description">
+            <ul>
+              <li>
+                <i class="fas fa-server"></i> Managed 24/7 production support
+                for Linux-based systems, handling troubleshooting, log analysis,
+                and performance tuning
+              </li>
+              <li>
+                <i class="fas fa-cloud"></i> Administered AWS services including
+                EC2, S3, IAM, and CloudWatch for application hosting and
+                monitoring
+              </li>
+              <li>
+                <i class="fas fa-cog"></i> Automated deployments using Jenkins
+                pipelines, reducing manual work and improving deployment
+                efficiency
+              </li>
+              <li>
+                <i class="fas fa-cubes"></i> Implemented Infrastructure as Code
+                using Terraform for faster, repeatable infrastructure
+                provisioning
+              </li>
+              <li>
+                <i class="fab fa-docker"></i> Containerized applications with
+                Docker, enhancing portability and environment consistency
+              </li>
+              <li>
+                <i class="fab fa-git-alt"></i> Collaborated with teams using Git
+                for version control and configuration management
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-music project-icon"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Spotify Music Dashboard</h3>
-                        <p>Interactive music dashboard with Spotify API integration featuring real-time data visualization and user playlist management.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-react"></i></span>
-                            <span><i class="fab fa-node-js"></i></span>
-                            <span><i class="fas fa-music"></i></span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-cloud project-icon"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>DevOps CI/CD Pipeline</h3>
-                        <p>Automated deployment pipeline using Jenkins, Docker, and AWS for seamless application delivery and infrastructure management.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-jenkins"></i> </span>
-                            <span><i class="fab fa-docker"></i> </span>
-                            <span><i class="fab fa-aws"></i> </span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chart-bar project-icon"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>System Monitoring Stack</h3>
-                        <p>Comprehensive monitoring solution using ELK stack, Prometheus, and Grafana for real-time system health tracking.</p>
-                        <div class="project-tech">
-                            <span><i class="fas fa-search"></i> </span>
-                            <span><i class="fas fa-fire"></i> </span>
-                            <span><i class="fas fa-tachometer-alt"></i> </span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-shopping-cart project-icon"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-stack e-commerce application with modern UI, payment integration, and containerized deployment architecture.</p>
-                        <div class="project-tech">
-                            <span><i class="fab fa-react"></i> React</span>
-                            <span><i class="fab fa-node-js"></i> Node.js</span>
-                            <span><i class="fas fa-database"></i> MongoDB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Some of my recent work</p>
         </div>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fas fa-code-branch"></i>
+              <h3>Pipeline & Monitoring</h3>
+            </div>
+            <p class="project-description">
+              Implemented a CI/CD pipeline with Jenkins, Docker, and AWS (ECR &
+              EC2), and set up a full monitoring stack (Prometheus, cAdvisor,
+              Node Exporter, Grafana) for automated deployment and
+              observability.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Jenkins</span>
+              <span class="tech-tag">AWS (EC2/ECR)</span>
+              <span class="tech-tag">GitHub</span>
+              <span class="tech-tag">Grafana</span>
+              <span class="tech-tag">Prometheus</span>
+              <span class="tech-tag">node_exporter</span>
+              <span class="tech-tag">cAdvisor</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fa-solid fa-music"></i>
+              <h3>Lyrics Card Generator</h3>
+            </div>
+            <p class="project-description">
+              Developed a dynamic web app using HTML, CSS, JavaScript, and PHP
+              that integrates Spotify API to search songs, fetch lyrics, and
+              create customizable, shareable lyric cards.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fas fa-code-branch"></i>
+              <h3>Pipeline for React App</h3>
+            </div>
+            <p class="project-description">
+              Designed and implemented a CI/CD pipeline to automate the build,
+              test, and deployment process of a React application using GitHub,
+              Jenkins, and Docker.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fa-brands fa-chrome"></i>
+              <h3>Chrome Time Tracker</h3>
+            </div>
+            <p class="project-description">
+              Developed a Chrome extension using the Chrome Extension API to
+              track and display total time spent in the browser and on
+              individual tabs, featuring a real-time tracking system and a
+              simple, responsive UI.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Chrome Extension API </span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fas fa-robot"></i>
+              <h3>Gemini Clone</h3>
+            </div>
+            <p class="project-description">
+              Developed a Google Gemini-inspired conversational UI using
+              React.js with Vite, featuring responsive design with Tailwind CSS
+              and secure API key management.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.Js</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">API Integration</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-header">
+              <i class="fa-brands fa-youtube"></i>
+              <h3>Youtube Clone</h3>
+            </div>
+            <p class="project-description">
+              Built a static YouTube homepage clone using React.js, styled with
+              Tailwind CSS, and structured as reusable components with clean
+              code organization.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">React.Js</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">API Integration</span>
+              <span class="tech-tag">Component Design</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i> <span class="ext-links">Live Demo</span>
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i> <span class="ext-links">View Code</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Ready to collaborate or discuss opportunities? Feel free to reach out!</p>
-
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>demo@email.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 12345 67890</p>
-                            </div>
-                        </div>
-                        <div class="contact-method">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>India</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/demo" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/demo" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="mailto:demo@email.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
-                        <label for="subject">Subject</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's work together on your next project
+          </p>
         </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item reveal">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>demo.email@example.com</p>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 12345 67890</p>
+              </div>
+            </div>
+            <div class="contact-item reveal">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Demo City, Demo State, India</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Dibya Sagar Samal. All rights reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2025 Dibya Sagar Samal. All rights reserved.</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
