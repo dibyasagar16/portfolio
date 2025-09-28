@@ -211,17 +211,16 @@ body {
   margin: 0 auto;
 }
 
-.logo-text {
-  font-size: 1.25rem;
-  font-weight: 700;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-secondary)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-logo img {
+  width: 2.6rem;
+  height: 2.6rem;
 }
 
 .nav-menu {
@@ -304,6 +303,7 @@ body {
 .hero {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -437,6 +437,48 @@ body {
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px var(--color-shadow);
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+}
+
+.mouse {
+  width: 25px;
+  height: 50px;
+  border: 2px solid var(--color-secondary);
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.mouse ::before {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    top: 10px;
+  }
+  50% {
+    opacity: 0.5;
+    top: 20px;
+  }
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
 }
 
 /* Sections */
@@ -895,14 +937,13 @@ section {
 
   .nav-menu {
     position: fixed;
-    left: -100%;
     top: 70px;
+    left: -100%;
     flex-direction: column;
     background: var(--color-bg-overlay);
     width: 100%;
     text-align: center;
     transition: 0.3s;
-    /* box-shadow: 0 8px 32px var(--color-shadow); */
     border-top: 1px solid var(--color-primary-border);
     padding: 2rem 0;
     backdrop-filter: blur(20px);
@@ -913,18 +954,18 @@ section {
   }
 
   .nav-menu .nav-link {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     display: block;
     font-size: 1.125rem;
     margin: 0.5rem 0;
   }
 
-  .theme-toggle {
-    margin-top: 1.5rem;
-  }
-
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  .scroll-down {
+    bottom: 2rem;
   }
 
   .about-content {
@@ -956,8 +997,13 @@ section {
 }
 
 @media (max-width: 480px) {
+  .hero {
+    min-height: 95vh;
+  }
+  
   .hero-title {
     font-size: 2rem;
+
   }
 
   .section-title {

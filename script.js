@@ -382,3 +382,11 @@ window.addEventListener(
     // Any additional scroll-based functionality can be added here
   }, 10)
 );
+
+//Eventlistener on logo image
+document.getElementById("logo-img").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
