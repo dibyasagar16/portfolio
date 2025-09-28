@@ -347,6 +347,11 @@ window.addEventListener(
   "scroll",
   debounce(() => {
     // Any additional scroll-based functionality can be added here
+    if (window.scrollY > 100) {
+      document.getElementById("scroll-down").style.display = "none";
+    } else {
+      document.getElementById("scroll-down").style.display = "block";
+    }
   }, 10)
 );
 
@@ -357,4 +362,3 @@ document.getElementById("logo-img").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
