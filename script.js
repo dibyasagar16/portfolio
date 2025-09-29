@@ -362,3 +362,4 @@ document.getElementById("logo-img").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
