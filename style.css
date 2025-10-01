@@ -299,7 +299,6 @@ body {
   opacity: 0;
 }
 
-
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -310,10 +309,10 @@ body {
   text-align: center;
   padding-top: 80px;
   background: linear-gradient(
-    135deg,
+    145deg,
     var(--color-bg) 0%,
-    var(--color-bg-alt) 50%,
-    var(--color-bg-deep) 100%
+    var(--color-bg-deep) 50%,
+    var(--color-bg-alt) 100%
   );
   position: relative;
   overflow: hidden;

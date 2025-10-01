@@ -249,7 +249,7 @@ const FormHandler = (() => {
     };
 
     if (validateForm(data)) {
-      showNotification("Message sent successfully! This is a demo.", "success");
+      showNotification("Message sent successfully!", "success");
       contactForm.reset();
     }
   };
