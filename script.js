@@ -159,17 +159,14 @@ const NavigationManager = (() => {
   return { init };
 })();
 
-// Form Handler
-const FormHandler = (() => {
-  const contactForm = document.getElementById("contactForm");
+//Notification handler
+const showNotification = (message, type) => {
+  const existing = document.querySelector(".notification");
+  if (existing) existing.remove();
 
-  const showNotification = (message, type) => {
-    const existing = document.querySelector(".notification");
-    if (existing) existing.remove();
-
-    const notification = document.createElement("div");
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
+  const notification = document.createElement("div");
+  notification.className = `notification notification-${type}`;
+  notification.innerHTML = `
       <div style="display: flex; align-items: center; gap: 0.5rem;">
         <i class="fas ${
           type === "success" ? "fa-check-circle" : "fa-exclamation-circle"
@@ -179,11 +176,11 @@ const FormHandler = (() => {
       <button onclick="this.parentElement.remove()" style="background: none; border: none; color: white; cursor: pointer; font-size: 1.2rem;">&times;</button>
     `;
 
-    const bgColor =
-      type === "success"
-        ? "var(--color-accent-green)"
-        : "var(--color-accent-orange)";
-    notification.style.cssText = `
+  const bgColor =
+    type === "success"
+      ? "var(--color-accent-green)"
+      : "var(--color-accent-orange)";
+  notification.style.cssText = `
       position: fixed;
       top: 100px;
       right: 20px;
@@ -201,26 +198,30 @@ const FormHandler = (() => {
       animation: slideInRight 0.3s ease-out;
     `;
 
-    if (!document.querySelector("#notification-styles")) {
-      const style = document.createElement("style");
-      style.id = "notification-styles";
-      style.textContent = `
+  if (!document.querySelector("#notification-styles")) {
+    const style = document.createElement("style");
+    style.id = "notification-styles";
+    style.textContent = `
         @keyframes slideInRight {
           from { transform: translateX(100%); opacity: 0; }
           to { transform: translateX(0); opacity: 1; }
         }
       `;
-      document.head.appendChild(style);
+    document.head.appendChild(style);
+  }
+
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    if (notification.parentElement) {
+      notification.remove();
     }
+  }, 5000);
+};
 
-    document.body.appendChild(notification);
-
-    setTimeout(() => {
-      if (notification.parentElement) {
-        notification.remove();
-      }
-    }, 5000);
-  };
+// Form Handler
+const FormHandler = (() => {
+  const contactForm = document.getElementById("contactForm");
 
   const validateForm = (data) => {
     if (!data.name || !data.email || !data.subject || !data.message) {
@@ -363,3 +364,22 @@ document.getElementById("logo-img").addEventListener("click", () => {
   });
 });
 
+//Live Demo handler
+// const liveDemoBtn = document.getElementById('live-demo-btn');
+const projectLinks = document.querySelectorAll(".project-link");
+
+projectLinks.forEach((projectLink) => {
+  // console.log(projectLink.getAttribute('href'));
+  projectLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = projectLink.getAttribute("href");
+    if (!href || href === "#" || href.trim() === "") {
+      showNotification(
+        "Currently demo is not available for this project!",
+        "error"
+      );
+    } else {
+      window.open(href, "_blank");
+    }
+  });
+});
