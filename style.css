@@ -448,11 +448,11 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* .scroll-down.hidden {
+.scroll-down.hidden {
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
-} */
+}
 
 .mouse {
   width: 25px;
