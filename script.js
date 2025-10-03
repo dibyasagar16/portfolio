@@ -255,13 +255,13 @@ const FormHandler = (() => {
     }
   };
 
-  const init = () => {
-    if (contactForm) {
-      contactForm.addEventListener("submit", handleSubmit);
-    }
-  };
+  // const init = () => {
+  //   if (contactForm) {
+  //     contactForm.addEventListener("submit", handleSubmit);
+  //   }
+  // };
 
-  return { init };
+  // return { init };
 })();
 
 // Enhanced Interactions
@@ -326,7 +326,7 @@ const EnhancedInteractions = (() => {
 document.addEventListener("DOMContentLoaded", () => {
   ThemeManager.init();
   NavigationManager.init();
-  FormHandler.init();
+  // FormHandler.init();
   EnhancedInteractions.init();
 });
 
@@ -349,9 +349,9 @@ window.addEventListener(
   debounce(() => {
     // Any additional scroll-based functionality can be added here
     if (window.scrollY > 100) {
-      document.getElementById("scroll-down").style.display = "none";
+      document.getElementById("scroll-down").classList.add('hidden');
     } else {
-      document.getElementById("scroll-down").style.display = "block";
+      document.getElementById("scroll-down").classList.remove('hidden');
     }
   }, 10)
 );

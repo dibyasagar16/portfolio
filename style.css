@@ -444,7 +444,15 @@ body {
   position: absolute;
   bottom: 1rem;
   text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* .scroll-down.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+} */
 
 .mouse {
   width: 25px;
@@ -854,8 +862,10 @@ section {
 
 .social-links {
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .social-link {
@@ -865,17 +875,23 @@ section {
   width: 50px;
   height: 50px;
   background: var(--color-card-bg);
-  color: var(--color-text);
+  color: var(--color-primary);
   border-radius: 50%;
   text-decoration: none;
+  cursor: pointer;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
   border: 1px solid var(--color-primary-border);
 }
 
 .social-link:hover {
-  background: var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   color: white;
-  transform: translateY(-4px) scale(1.1);
+  transform: translateY(-2px) scale(1.1);
   box-shadow: 0 8px 25px var(--color-shadow);
 }
 
