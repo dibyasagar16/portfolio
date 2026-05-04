@@ -1,18 +1,19 @@
-:root {
-    --background-color: #000000;
-    --card-background: rgba(255, 255, 255, 0.1);
-    --border-color: rgba(255, 255, 255, 0.25);
+/* Restored original style.css content without glassmorphism and black background */
+
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: black;
 }
 
-.btn, .stat-item, .skill-category, .skill-item, .project-card, .contact-item, .contact-form, .social-link {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
-    padding: 10px;
-    transition: all 0.3s ease;
+.container {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover, .stat-item:hover, .skill-category:hover, .skill-item:hover, .project-card:hover, .contact-item:hover, .contact-form:hover, .social-link:hover {
-    background: rgba(255, 255, 255, 0.2);
+h1, h2, h3, h4 {
+    margin: 10px 0;
 }
+
+/* Add other styles as needed */
